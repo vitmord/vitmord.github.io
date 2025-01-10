@@ -27,6 +27,11 @@ body {
     color: var(--text-color);
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+}
+
 a {
     text-decoration: none;
 }
@@ -136,9 +141,6 @@ a {
 }
 
 .hero__img {
-    width: 750px;
-    height: 700px;
-    object-fit: contain;
     animation: scaleUpCenter 2s ease 0s 1 normal forwards;
 }
 
@@ -152,7 +154,6 @@ a {
 
 .hero__description {
     width: 100%;
-    min-width: 500px;
     font-size: var(--text-font);
     color: var(--other-color);
     line-height: 30px;
@@ -279,13 +280,16 @@ a {
 }
 
 .video {
-    width: 100%;
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
 }
-
 .hero__video {
-    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    object-fit: cover;
+    height: 100%;
 }
 
 #player-container #play-pause {
@@ -332,11 +336,6 @@ a {
         --title-font: 5rem;
         --text-font: 1rem;
     }
-    .hero__img {
-        max-width: 650px;
-        max-height: 600px;
-        object-fit: contain;
-    }
     .box {
         width: 70px;
         height: 70px;
@@ -346,11 +345,6 @@ a {
 @media (width <= 1370px) {
     :root {
         --title-font: 4rem;
-    }
-    .hero__img {
-        max-width: 600px;
-        max-height: 550px;
-        object-fit: contain;
     }
 }
 @media (width <= 1210px) {
@@ -396,12 +390,8 @@ a {
         gap: 5px;
     }
     .hero__img {
-        display: block;
         margin: 0 auto;
         padding-top: 30px;
-        width: 500px;
-        max-width: 100%;
-        height: auto;
     }
     .hero__text {
         text-align: center;
@@ -409,7 +399,6 @@ a {
     .hero__description {
         margin: 10px auto;
         max-width: 70%;
-        /* margin-bottom: 30px; */
     }
     .hero__price-block {
         justify-content: center;
@@ -424,9 +413,6 @@ a {
 @media (width <= 620px) {
     .hero {
         padding: 20px 4%;
-    }
-    .hero__description {
-        max-width: 50%;
     }
     .btn {
         padding: 12px 24px;
