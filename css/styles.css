@@ -13,6 +13,11 @@ html {
     scroll-behavior: smooth;
 }
 
+html,
+body {
+    height: 100%;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -273,8 +278,14 @@ a {
     color: var(--bg-color);
 }
 
-#player-container {
-    /* display: inline-block; */
+.video {
+    width: 100%;
+}
+
+.hero__video {
+    display: block;
+    width: 100%;
+    object-fit: cover;
 }
 
 #player-container #play-pause {
@@ -322,8 +333,8 @@ a {
         --text-font: 1rem;
     }
     .hero__img {
-        width: 650px;
-        height: 600px;
+        max-width: 650px;
+        max-height: 600px;
         object-fit: contain;
     }
     .box {
@@ -337,12 +348,15 @@ a {
         --title-font: 4rem;
     }
     .hero__img {
-        width: 600px;
-        height: 550px;
+        max-width: 600px;
+        max-height: 550px;
         object-fit: contain;
     }
 }
 @media (width <= 1210px) {
+    .header {
+        backdrop-filter: none;
+    }
     .menu__icon {
         display: inline-flex;
         justify-content: center;
@@ -351,7 +365,7 @@ a {
     .navbar {
         position: absolute;
         top: 0;
-        right: -100%;
+        right: -200%;
         width: 100%;
         height: 100vh;
         backdrop-filter: blur(30px);
@@ -398,6 +412,7 @@ a {
         /* margin-bottom: 30px; */
     }
     .hero__price-block {
+        justify-content: center;
         font-size: 24px;
         margin-bottom: 30px;
     }
