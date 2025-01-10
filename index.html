@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="ru">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>SNKRS Shop</title>
+        <link id="favicon" rel="icon" type="image/x-icon" href="./img/favicon/favicon_01.ico" />
+
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@700&family=Roboto:wght@400;700&display=swap" rel="stylesheet" />
+        <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet" />
+        <link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet" />
+
+        <link href="./css/styles.css" rel="stylesheet" />
+    </head>
+    <body>
+        <header class="header">
+            <a class="logo">
+                <img class="logo__img" src="./img/nike_logo.svg" alt="SNKRS Shop Логотип" />
+            </a>
+
+            <ul class="navbar" id="navbar">
+                <li class="navbar__item">
+                    <a class="navbar__link" href="#">Мужские</a>
+                </li>
+                <li class="navbar__item">
+                    <a class="navbar__link" href="#">Женские</a>
+                </li>
+                <li class="navbar__item">
+                    <a class="navbar__link" href="#">Детские</a>
+                </li>
+                <li class="navbar__item">
+                    <a class="navbar__link" href="#">Распродажа</a>
+                </li>
+                <li class="navbar__item">
+                    <a class="navbar__link" href="#">О нас</a>
+                </li>
+            </ul>
+
+            <ul class="menu">
+                <li class="menu__item">
+                    <a class="menu__link" href=""><i class="ri-search-line"></i></a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link" href="#"><i class="ri-shopping-cart-2-line"></i></a>
+                </li>
+                <li class="menu__item">
+                    <a class="menu__link menu__icon bx bx-menu" id="menu-icon" href="#"></a>
+                </li>
+            </ul>
+        </header>
+
+        <section class="hero">
+            <img class="hero__img" src="./img/nike_01.png" alt="Nike Air Dunk-270" />
+            <div class="hero__text">
+                <h2 class="hero__title">
+                    Nike Air <br />
+                    Dunk-270
+                </h2>
+                <p class="hero__description">Кроссовки Nike, объединившие в себе сразу же две модели — классические Air Max Plus и современную Vapormax. Верхняя часть выполнена из сочетания неопрена и нейлона со специальными пластиковыми элементами по бокам, которые отвечают за плотную фиксацию ноги</p>
+                <div class="hero__price-block">
+                    <b class="hero__price">23 990</b>
+                    <!-- <i class="hero__price-audio ri-play-circle-line"></i> -->
+                    <audio id="track">
+                        <source src="./media/audio.mp3" type="audio/mpeg" />
+                    </audio>
+
+                    <div id="player-container">
+                        <div id="play-pause" class="play"></div>
+                    </div>
+                </div>
+
+                <div class="hero__btn-block">
+                    <a class="btn" href="#">Добавить в корзину</a>
+                    <a class="btn-2" href="#">Подробнее</a>
+                </div>
+            </div>
+        </section>
+
+        <div class="content">
+            <div class="box" onclick="slider('01')">
+                <img class="box__img" src="./img/nike_01.png" alt="Nike Air Dunk-270" />
+            </div>
+            <div class="box" onclick="slider('02')">
+                <img class="box__img" src="./img/nike_02.png" alt="Nike Air Dunk-270" />
+            </div>
+            <div class="box" onclick="slider('03')">
+                <img class="box__img" src="./img/nike_03.png" alt="Nike Air Dunk-270" />
+            </div>
+        </div>
+
+        <section class="video" id="video">
+            <video class="hero__video" controls width="100%">
+                <source src="./media/snkrs_video.webm" type="video/webm" />
+                <source src="./media/snkrs_video.mp4" type="video/mp4" />
+                Ваш браузер не поддерживает встроенные видео :(
+            </video>
+        </section>
+
+        <a class="scroll" href="#video"><i class="ri-scroll-to-bottom-line"></i></a>
+
+        <script src="./js/script.js"></script>
+    </body>
+</html>
